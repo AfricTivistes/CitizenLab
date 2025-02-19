@@ -1,0 +1,20 @@
+{
+  "name": "monorepo-root",
+  "private": true,
+  
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "check": "turbo run check",
+    "test": "turbo run test"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.27.1",
+    "turbo": "^1.12.4"
+  },
+  "dependencies": {
+    "@astrojs/tailwind": "^6.0.0",
+    "astro-icon": "^1.1.5"
+  }
+}

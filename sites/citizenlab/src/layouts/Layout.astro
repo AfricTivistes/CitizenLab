@@ -1,0 +1,48 @@
+---
+import '@onwidget/astrowind/src/assets/styles/tailwind.css';
+
+import { I18N } from 'astrowind:config';
+
+import CommonMeta from '@onwidget/astrowind/src/components/common/CommonMeta.astro';
+import Favicons from '@onwidget/astrowind/src/components/Favicons.astro';
+import CustomStyles from '@onwidget/astrowind/src/components/CustomStyles.astro';
+import ApplyColorMode from '@onwidget/astrowind/src/components/common/ApplyColorMode.astro';
+import Metadata from '@onwidget/astrowind/src/components/common/Metadata.astro';
+import SiteVerification from '@onwidget/astrowind/src/components/common/SiteVerification.astro';
+import Analytics from '@onwidget/astrowind/src/components/common/Analytics.astro';
+import BasicScripts from '@onwidget/astrowind/src/components/common/BasicScripts.astro';
+
+// Comment the line below to disable View Transitions
+import { ClientRouter } from 'astro:transitions';
+
+import type { MetaData as MetaDataType } from '~/types';
+
+export interface Props {
+  metadata?: MetaDataType;
+}
+
+const { metadata = {} } = Astro.props;
+const { language, textDirection } = I18N;
+---
+
+<!doctype html>
+<html lang={language} dir={textDirection} class="2xl:text-[20px]">
+  <head>
+    <CommonMeta />
+    <Favicons />
+    <CustomStyles />
+    <ApplyColorMode />
+    <Metadata {...metadata} />
+    <SiteVerification />
+    <Analytics />
+
+    <!-- Comment the line below to disable View Transitions -->
+    <ClientRouter fallback="swap" />
+  </head>
+
+  <body class="antialiased text-default bg-page tracking-tight">
+    <slot />
+
+    <BasicScripts />
+  </body>
+</html>
