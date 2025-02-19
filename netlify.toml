@@ -1,6 +1,6 @@
 [build]
-  publish = "dist"
-  command = "npm run build"
+  publish = "sites/citizenlab/dist"
+  command = "git submodule update --remote && pnpm i && cd sites/citizenlab && pnpm run build"
 [build.processing.html]
   pretty_urls = false
 [[headers]]
