@@ -4,8 +4,9 @@
   "globalDependencies": ["**/.env.*local"],
   "pipeline": {
     "build": {
-      "dependsOn": ["^build"],
-      "outputs": ["dist/**"]
+      "inputs": ["sites/citizenlab/**/*"],
+      "outputs": ["sites/citizenlab/dist/**"],
+      "cache": true
     },
     "dev": {
       "cache": false,

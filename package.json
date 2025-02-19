@@ -3,7 +3,7 @@
   "private": true,
   
   "scripts": {
-    "build": "turbo run build",
+    "build": "turbo run build --filter=@africTivistes/citizenlab",
     "dev": "turbo run dev",
     "lint": "turbo run lint",
     "check": "turbo run check",

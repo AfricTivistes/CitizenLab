@@ -1,5 +1,5 @@
 [build]
-  publish = "dist"
+  publish = "sites/citizenlab/dist"
   command = "npm run build"
 [build.processing.html]
   pretty_urls = false
