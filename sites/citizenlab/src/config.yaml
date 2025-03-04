@@ -1,5 +1,5 @@
 site:
-  name: AstroWind
+  name: CitizenLab
   site: 'https://astrowind.vercel.app'
   base: '/'
   trailingSlash: false

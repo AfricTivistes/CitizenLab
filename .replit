@@ -1,10 +1,15 @@
-run = "npm run dev"
+run = "pnpm dev"
 modules = ["nodejs-20"]
 [nix]
 channel = "stable-24_05"
 
 [deployment]
 run = ["sh", "-c", "npm run dev"]
+
+[[ports]]
+localPort = 4321
+externalPort = 8080
+exposeLocalhost = true
 
 [[ports]]
 localPort = 4322
